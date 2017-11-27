@@ -5,10 +5,15 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "Gripindoor" %></title>
 <!--     <%= stylesheet_link_tag "//cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" %> -->
+    <%= stylesheet_link_tag  'site', "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" %>
     <%= stylesheet_link_tag "site" %>
 <!--     <%= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" %> -->
     <%= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" %>
@@ -18,13 +23,16 @@
   <body>
     <%= yield %>
 
+<div class=footer>
+
     <div class="copyright">
       &#169; Gripindoor 2017
     </div>
-
+  
     <div class="credits">
       made by <a href="http://www.rmanev.com">@room_n</a>
     </div>
-
+</div>
+  
   </body>
 </html>

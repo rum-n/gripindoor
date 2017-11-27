@@ -2,19 +2,43 @@
 title: "Gripindoor - Your guide to climbing gyms everywhere!"
 ---
 
-<div class="navbar">
-	<h1 class="menu-item"><%= link_to 'List', '/list.html' %></h1>
-	<h1 class="menu-item"><%= link_to 'Submit', '/submit.html' %></h1>
-</div>
+<!-- <div class="navbar">
+	<%= link_to 'List', '/list.html' %>
+	<a><h1 class="menu-item" id="contact">Submit</h1></a>
+</div> -->
 
-<div class="main">
-	<div id="gyms"></div>
-</div>
+  <div id="contactForm">
+    <h1 id="contact-title">If you've visited a climbing gym and would like to share your thoughts about it, you can submit a review below.</h1>
+    
+
+    <form method="POST" action="http://formspree.io/manev.ru@gmail.com">
+      <input placeholder="Your name" name = "name" type="text" required />
+      <input placeholder="Email" name = "e-mail" type="email" required />
+      <input placeholder="Name of the gym" name = "subject" type="text" required />
+      <textarea placeholder="Write something..." name = "message"></textarea>
+      <input class="formBtn" type="submit" />
+    </form>
+  </div>
+
+    <div id="map-wrapper">
+        <div id="gyms"></div>
+        <div class="leaflet-bottom leaflet-left">
+<!--         <div id="button-wrapper">
+            <a><h1 class="menu-item" <%= link_to  'List', '/list.html' %></a>
+            <a><h1 class="menu-item" id="contact">Submit</h1></a>
+        </div> -->
+        </div>
+    </div>
+
+	<div class="social"><a href="https://twitter.com/room_n" target="blank"><i class="fa fa-twitter fa-2x"></i></a></div>
 
 <script>
-  var mymap = L.map('gyms').setView([50.6935386,12.4555987], 5);
+  var mymap = L.map('gyms',{
+  	zoomDelta: 1.5,
+  	zoomSnap: 1
+  }).setView([50.6935386,12.4555987], 5);
 
-L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoicm9vbS1uIiwiYSI6ImNqOWxqdHlhNjBpdTEycW50ajUzcnBvdmwifQ.iYZvyp64mcHv4HpYI02QKg', {
+L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
 	attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
     maxZoom: 18,
     id: 'mapbox.streets'
@@ -23,6 +47,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 	var carabiner = L.icon({
     iconUrl: 'stylesheets/images/carabiner.png',
     iconSize: [35, 35], // size of the icon
+    iconColor: '#DAAF47'
 });
 
 	L.marker([42.69382, 23.33604], {icon: carabiner}).addTo(mymap)
@@ -43,13 +68,42 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 	L.marker([52.5223336,13.3874214,], {icon: carabiner}).addTo(mymap)
 		.bindPopup("<b>Berta block Boulderhalle Berlin");
 
-	L.marker([52.5181235,13.3575604], {icon: carabiner}).addTo(mymap)
-		.bindPopup("<b>Boulderworx");
+	L.marker([42.6652928,23.3721769], {icon: carabiner}).addTo(mymap)
+		.bindPopup("<b>Walltopia");
 
-		52.5010016,13.4381262
+	L.marker([42.649847,23.3471509], {icon: carabiner}).addTo(mymap)
+		.bindPopup("<b>Bonsist");
+
+	L.marker([42.649847,23.3471509], {icon: carabiner}).addTo(mymap)
+		.bindPopup("<b>NSA Climbing");
+
+	L.marker([48.1982026,16.3627918], {icon: carabiner}).addTo(mymap)
+		.bindPopup("<b>Edelweiss Center");
+
+	L.marker([48.1982026,16.3627918], {icon: carabiner}).addTo(mymap)
+		.bindPopup("<b>Blockfabrik");
+
+	L.marker([48.1982381,16.3627918], {icon: carabiner}).addTo(mymap)
+		.bindPopup("<b>Vienna City Rock");
+
+	L.marker([48.1986682,16.3586164], {icon: carabiner}).addTo(mymap)
+		.bindPopup("<b>Flakturm");
+
+	L.marker([48.1281244,11.6028905], {icon: carabiner}).addTo(mymap)
+		.bindPopup("<b>Boulderwelt Munich Ost");
+
+	L.marker([48.1365236,11.4181963], {icon: carabiner}).addTo(mymap)
+		.bindPopup("<b>Boulderwelt Munich West");
+
 
 		var popup = L.popup();
 
+	var options = {
+	    modal: true,
+	    title: "Box area zoom"
+	};
+	var control = L.control.zoomBox(options);
+	map.addControl(control);
 
 </script>
 
