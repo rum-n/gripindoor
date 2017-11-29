@@ -5,7 +5,7 @@ $(document).ready(function(){$("body").hide().fadeIn(2000);});
 $(function() {
   
   // contact form animations
-  $('#Btn2').click(function() {
+  $('#contact').click(function() {
     $('#contactForm').fadeToggle();
   })
   $(document).mouseup(function (e) {
