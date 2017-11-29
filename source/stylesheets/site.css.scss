@@ -1,7 +1,8 @@
 /*=require leaflet*/
+/*=require leaflet-search*/
 
 body {
-  background-color: #505050;
+  background-color: #fff;
   font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
     "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
     "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
@@ -16,7 +17,24 @@ a {
   &:hover {
     opacity: 1;
     color: #c03429;
+    text-decoration: none;
   }
+}
+
+.main {
+  padding: 5% 15% 5% 15%;
+}
+
+.back-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 2em;
+  font-size: 16pt;
+  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
+    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
+    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
+    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
 }
 
 #map-wrapper {
@@ -39,6 +57,13 @@ a {
 
 .menu-item:hover {
   color: #c03429;
+}
+
+.logo {
+  /*padding: 0.5em;*/
+  position: fixed;
+  bottom: 30%;
+  z-index: 9999;
 }
 
 .copyright {
