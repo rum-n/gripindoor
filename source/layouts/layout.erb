@@ -23,6 +23,16 @@
     <%= javascript_include_tag "site" %>
     <%= javascript_include_tag "leaflet.markercluster" %>
 <!--     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %> -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-66629389-4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-66629389-4');
+    </script>
   </head>
   <body>
     <%= yield %>
