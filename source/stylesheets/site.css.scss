@@ -117,15 +117,12 @@ hr {
 .gym-details {
   color: #c03429;
   padding-bottom: 2em;
+  display: inline-block;
 }
 
-#gym-icons li {
-  display: inline;
-  padding-right: 1.5em;
-}
 
-#SUwallAcc {
-  padding-left: 3.2em;
+#gym-entry {
+  padding-left: 1em;
 }
 
 #SUwallAcc a{
