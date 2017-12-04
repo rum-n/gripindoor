@@ -1,5 +1,5 @@
 /*=require leaflet*/
-/*=require leaflet-search*/
+/*=require leaflet-search.min*/
 
 body {
   background-color: #fff;
@@ -69,8 +69,22 @@ hr {
 .logo {
   /*padding: 0.5em;*/
   position: fixed;
-  bottom: 30%;
+  top: 50%;
+  left: 5%;
   z-index: 9999;
+}
+
+.logo h5 {
+  text-align: center;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
+    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
+    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
+    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
+}
+
+.logo h5:hover {
+  color: #c03429;
 }
 
 .copyright {
