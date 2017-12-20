@@ -12,7 +12,7 @@ body {
 a {
   color: black;
   text-decoration: none;
-  opacity: 0.2;
+  opacity: 0.6;
   &:focus,
   &:hover {
     opacity: 1;
@@ -130,7 +130,19 @@ hr {
 
 .gym-details {
   color: #c03429;
-  padding-bottom: 2em;
+ /* padding-bottom: 2em;*/
+  padding-left: 1.5em;
+  padding-top: 2em;
+  padding-right: 1.5em;
+  display: inline-block;
+}
+
+.gym-details-text {
+  color: #000;
+ /* padding-bottom: 2em;*/
+  padding-left: 1.5em;
+  padding-top: 2em;
+  padding-right: 1.5em;
   display: inline-block;
 }
 
