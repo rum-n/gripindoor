@@ -1,0 +1,31 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Der Kegel",
+                "address": "Revaler Str. 99, 10245 Berlin",
+                                "latitude": 13.454293,
+                "longitude": 52.507034
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.083372, 42.362504]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Boulderklub Kreuzberg",
+                "address": "Ohlauer Str. 38, 10999 Berlin",
+                                "latitude": 13.42916,
+                "longitude": 52.4956908
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.087749, 42.363884]
+            }
+        }
+    ]
+};
